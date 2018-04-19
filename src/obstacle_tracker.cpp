@@ -80,7 +80,7 @@ bool ObstacleTracker::updateParams(std_srvs::Empty::Request &req, std_srvs::Empt
   nh_local_.param<double>("process_rate_variance", p_process_rate_variance_, 0.1);
   nh_local_.param<double>("measurement_variance", p_measurement_variance_, 1.0);
 
-  nh_local_.param<string>("frame_id", p_frame_id_, string("map"));
+  nh_local_.param<string>("frame_id", p_frame_id_, string("laser"));
   obstacles_.header.frame_id = p_frame_id_;
 
   TrackedObstacle::setSamplingTime(p_sampling_time_);
